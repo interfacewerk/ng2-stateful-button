@@ -12,5 +12,5 @@ import { StatefulButtonComponent } from './stateful-button/stateful-button.compo
   ],
   providers: []
 })
-export class StateFullButtonLibrary {
+export class StatefulButtonModule {
 }

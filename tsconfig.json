@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "module": "es2015",
+    "target": "es5",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "types": [
+      "node",
+      "jasmine"
+    ],
+    "lib": ["es2015", "dom"]
+  },
+  "files":[
+    "index.ts",
+    "./src/index.ts",
+    "./src/stateful-button/stateful-button.component.ts",
+    "./src/stateful-button/stateful-button.component.spec.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "bundles"
+  ],
+  "angularCompilerOptions": {
+    "strictMetadataEmit": true,
+    "skipTemplateCodegen": true
+  }
+}
