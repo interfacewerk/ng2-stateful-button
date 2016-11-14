@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'sf-button',
+  selector: 'stateful-button',
   templateUrl: './stateful-button.component.html',
   styleUrls: ['./stateful-button.component.css']
 })

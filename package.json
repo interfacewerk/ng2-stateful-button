@@ -9,11 +9,11 @@
   "scripts": {
     "start": "ng serve",
     "lint": "tslint \"src/**/*.ts\"",
-    "test": "",
+    "test": "ng test",
     "pree2e": "webdriver-manager update",
     "e2e": "protractor",
     "prepublish": "tsc && npm run build",
-    "commit": "npm run prepublish && npm test && git-cz",
+    "commit": "npm run prepublish && git-cz",
     "build": "webpack && cp bundles/ng2-stateful-button.umd.js bundles/index.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
@@ -63,8 +63,7 @@
     "cz-conventional-changelog": "1.2.0",
     "commitizen": "2.8.6",
     "semantic-release": "4.3.5",
-    "webpack": "2.1.0-beta.25",
-    "angular-stateful-button": "latest"
+    "webpack": "2.1.0-beta.25"
   },
   "config": {
     "commitizen": {
