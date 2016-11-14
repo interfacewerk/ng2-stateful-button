@@ -16,31 +16,31 @@ export class StatefulButtonDirective {
     this.element.classList.add('stateful-button');
   }
 
-  private state: ButtonState; 
-  private element: HTMLElement;
-
   private updateFromState() {
-    switch(this.state) {
+    switch (this.state) {
       case ButtonState.DOING: {
         this.element.classList.add('stateful-button--doing');
         this.element.classList.remove('stateful-button--success');
         this.element.classList.remove('stateful-button--neutral');
-        break; 
       }
+      break;
       case ButtonState.SUCCESS: {
         this.element.classList.remove('stateful-button--doing');
         this.element.classList.add('stateful-button--success');
         this.element.classList.remove('stateful-button--neutral');
-        break;
       }
+      break;
       default: {
         this.element.classList.remove('stateful-button--doing');
         this.element.classList.remove('stateful-button--success');
         this.element.classList.add('stateful-button--neutral');
-        break;
       }
-    }    
+      break;
+    }
   }
+
+  private state: ButtonState;
+  private element: HTMLElement;
 }
 
 export enum ButtonState {

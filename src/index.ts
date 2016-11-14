@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { StatefulButtonDirective } from './stateful-button/stateful-button.component';
+import { ButtonState, delay, StatefulButtonDirective } from './stateful-button/stateful-button.directive';
+export { ButtonState, delay };
 
 @NgModule({
   declarations: [
