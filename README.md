@@ -1,31 +1,38 @@
-# AngularStatefulButton
+# Angular2 Stateful Button
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.19-3.
+## Demo
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+An implementation of stateful buttons for angular2+ including loading, progress,success and failure state.
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
+```
+yarn add ng2-stateful-button 
+```
 
-## Build
+or
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+```
+npm install ng2-stateful-button --save
+```
 
-## Running unit tests
+## Example
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```TypeScript
+// app.module.ts
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {StatefulButtonModule} from 'ng2-stateful-button'; // <-- import the module
+import {MyComponent} from './my.component';
 
-## Running end-to-end tests
+@NgModule({
+    imports: [BrowserModule, StatefulButtonModule], // <-- include it in your app module
+    declarations: [MyComponent],
+    bootstrap: [MyComponent]
+})
+export class MyAppModule {}
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+## License
 
-## Deploying to Github Pages
-
-Run `ng github-pages:deploy` to deploy to Github Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+MIT
