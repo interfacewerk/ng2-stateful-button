@@ -1,0 +1,29 @@
+.stateful-button {
+	position: relative;
+}
+
+.stateful-button::before {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.stateful-button.stateful-button--doing::before, .stateful-button.stateful-button--success::before {
+  display: block;
+  z-index: 1;
+}
+
+.stateful-button.stateful-button--doing::before	{
+  content: 'DOING';
+  background-color: grey;	
+  color: white;					
+}
+.stateful-button.stateful-button--success::before	{
+  content: 'DONE';
+  background-color: green;	
+  color: white;					
+}

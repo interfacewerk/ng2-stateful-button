@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
-import { StatefulButtonComponent } from './stateful-button/stateful-button.component';
+import { StatefulButtonDirective } from './stateful-button/stateful-button.component';
 
 @NgModule({
   declarations: [
-    StatefulButtonComponent
+    StatefulButtonDirective
   ],
   imports: [
   ],
   exports: [
-    StatefulButtonComponent
+    StatefulButtonDirective
   ],
   providers: []
 })
