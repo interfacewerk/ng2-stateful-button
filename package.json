@@ -1,6 +1,10 @@
 {
   "name": "ng2-stateful-button",
   "description": "An implementation of stateful buttons for angular2+ including loading, progress,success and failure state.",
+  "repository": {
+    "url": "https://github.com/interfacewerk/ng2-stateful-button",
+    "type": "git"
+  },
   "author": "interfacewerk GmbH, Kevin Merckx, Moritz C. Türck",
   "license": "MIT",
   "main": "bundles/ng2-stateful-button.js",
@@ -26,10 +30,8 @@
     "button",
     "stateful"
   ],
-  "private": true,
   "peerDependencies": {
-      "@angular/core": "^2.0.0",
-      "@angular/http": "^2.0.0"
+    "@angular/core": "^2.0.0"
   },
   "devDependencies": {
     "@angular/common": "~2.1.0",
@@ -40,14 +42,13 @@
     "@angular/platform-browser": "~2.1.0",
     "@angular/platform-browser-dynamic": "~2.1.0",
     "@angular/router": "~3.1.0",
-    "core-js": "^2.4.1",
-    "rxjs": "5.0.0-beta.12",
-    "ts-helpers": "^1.1.1",
-    "zone.js": "^0.6.23",
     "@types/jasmine": "^2.2.30",
     "@types/node": "^6.0.42",
     "angular-cli": "1.0.0-beta.19-3",
     "codelyzer": "1.0.0-beta.1",
+    "commitizen": "2.8.6",
+    "core-js": "^2.4.1",
+    "cz-conventional-changelog": "1.2.0",
     "jasmine-core": "2.4.1",
     "jasmine-spec-reporter": "2.5.0",
     "karma": "1.2.0",
@@ -56,14 +57,15 @@
     "karma-jasmine": "^1.0.2",
     "karma-remap-istanbul": "^0.2.1",
     "protractor": "4.0.9",
+    "rxjs": "5.0.0-beta.12",
+    "semantic-release": "4.3.5",
+    "ts-helpers": "^1.1.1",
     "ts-node": "1.2.1",
     "tslint": "3.13.0",
     "typescript": "~2.0.3",
     "webdriver-manager": "10.2.5",
-    "cz-conventional-changelog": "1.2.0",
-    "commitizen": "2.8.6",
-    "semantic-release": "4.3.5",
-    "webpack": "2.1.0-beta.25"
+    "webpack": "2.1.0-beta.25",
+    "zone.js": "^0.6.23"
   },
   "config": {
     "commitizen": {
