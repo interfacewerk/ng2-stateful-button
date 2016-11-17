@@ -36,6 +36,8 @@ export class MyAppModule {}
 
 ## Usage
 
+### Behaviour
+
 ng2-stateful-button provides one component `stateful-button` that you can use to wrap a button:
 
 ```
@@ -71,6 +73,24 @@ export class MyComponent {
 ```
 
 Use the `sb-label-idle/doing/failure/success` components to define what will be shown for each state of the button. That's it!
+
+** IMPORTANT **: put the `sb-label-XY` into the `<button>`.
+
+### Style
+
+ng2-stateful-button comes with inline component styles. They are completely customizable. Each state (IDLE, DOING, SUCCESS, FAILURE) is represented
+as a CSS class on the `stateful-button` element. No magic here. You can customize the `sb-label-XY` as well. For your information, the generated HTML looks like:
+
+```
+<stateful-button class="stateful-button stateful-button--doing">
+  <button>
+    <sb-label-idle>Save</sb-label-idle>
+    <sb-label-doing>Saving</sb-label-doing>
+    <sb-label-success>Saved</sb-label-success>
+    <sb-label-failure>Save failed!</sb-label-failure>
+  </button>
+</stateful-button>
+```
 
 ## Develop
 
