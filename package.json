@@ -1,4 +1,5 @@
 {
+  "version": "0.0.7",
   "name": "ng2-stateful-button",
   "description": "An implementation of stateful buttons for angular2+ including loading, progress,success and failure state.",
   "repository": {
@@ -8,8 +9,8 @@
   "author": "interfacewerk GmbH, Kevin Merckx, Moritz C. Türck",
   "license": "MIT",
   "main": "bundles/ng2-stateful-button.js",
-  "module": "index.js",
-  "typings": "index.d.ts",
+  "module": "bundles/index.js",
+  "typings": "bundles/index.d.ts",
   "scripts": {
     "start": "ng serve",
     "lint": "tslint \"src/**/*.ts\"",

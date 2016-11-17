@@ -40,7 +40,7 @@ module.exports = {
             exclude: [helpers.root('node_modules')]
         }, {
             test: /\.ts$/,
-            loader: 'awesome-typescript-loader?declaration=false',
+            loader: 'awesome-typescript-loader?declaration=true',
             exclude: [/\.e2e\.ts$/]
         }]
     },

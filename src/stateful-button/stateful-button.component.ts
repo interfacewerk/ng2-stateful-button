@@ -89,12 +89,73 @@ export class SBLabelFailureComponent {}
       margin: 0px 5px -3px 0px;
       border-radius: 10px;
       box-shadow: 0 1px 0 0 white;
-      -ms-animation: ring 1s linear infinite;
-      -moz-animation: ring 1s linear infinite;
-      -webkit-animation: ring 1s linear infinite;
-      -o-animation: ring 1s linear infinite;
-      animation: ring 1s linear infinite;
+      -ms-animation: stateful-button--animation 1s linear infinite;
+      -moz-animation: stateful-button--animation 1s linear infinite;
+      -webkit-animation: stateful-button--animation 1s linear infinite;
+      -o-animation: stateful-button--animation 1s linear infinite;
+      animation: stateful-button--animation 1s linear infinite;
       z-index: 1;
+    }
+
+    @-moz-keyframes stateful-button--animation {
+      0% {
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @-ms-keyframes stateful-button--animation {
+      0% {
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @-webkit-keyframes stateful-button--animation {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @-o-keyframes stateful-button--animation {
+      0% {
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes stateful-button--animation {
+      0% {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
     }
     `
   ]
