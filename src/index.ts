@@ -1,15 +1,24 @@
 import { NgModule } from '@angular/core';
-import { ButtonState, delay, StatefulButtonDirective } from './stateful-button/stateful-button.directive';
+import {
+  ButtonState,
+  delay,
+  StatefulButtonComponent,
+  SBLabelDoingComponent,
+  SBLabelIdleComponent,
+  SBLabelSuccessComponent
+} from './stateful-button/stateful-button.directive';
+import { BrowserModule } from '@angular/platform-browser';
 export { ButtonState, delay };
 
 @NgModule({
   declarations: [
-    StatefulButtonDirective
+    StatefulButtonComponent, SBLabelDoingComponent, SBLabelIdleComponent, SBLabelSuccessComponent
   ],
   imports: [
+    BrowserModule
   ],
   exports: [
-    StatefulButtonDirective
+    StatefulButtonComponent, SBLabelDoingComponent, SBLabelIdleComponent, SBLabelSuccessComponent
   ],
   providers: []
 })

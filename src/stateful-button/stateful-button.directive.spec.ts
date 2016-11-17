@@ -3,15 +3,15 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { StatefulButtonDirective } from './stateful-button.directive';
+import { StatefulButtonComponent } from './stateful-button.directive';
 
 describe('StatefulButtonComponent', () => {
-  let component: StatefulButtonDirective;
-  let fixture: ComponentFixture<StatefulButtonDirective>;
+  let component: StatefulButtonComponent;
+  let fixture: ComponentFixture<StatefulButtonComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StatefulButtonDirective ]
+      declarations: [ StatefulButtonComponent ]
     })
     .compileComponents();
   }));
