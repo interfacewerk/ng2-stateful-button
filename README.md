@@ -16,11 +16,6 @@ or
 npm install ng2-stateful-button --save
 ```
 
-## Usage
-
-
-TBD
-
 
 ## Setup
 
@@ -39,6 +34,37 @@ import {MyComponent} from './my.component';
 export class MyAppModule {}
 ```
 
+## Usage
+
+ng2-stateful-button provides one component `stateful-button` that you can use to wrap a button:
+
+```
+<stateful-button [buttonState]="myButtonState">
+  <button (click)="do()">
+    <sb-label-idle>Save</sb-label-idle>
+    <sb-label-doing>Saving</sb-label-doing>
+    <sb-label-success>Saved</sb-label-success>
+    <sb-label-failure>Save failed!</sb-label-failure>
+  </button>
+</stateful-button>
+```
+
+The `stateful-button` component takes one input `buttonState`, which is the state of your button.
+
+There are four states which are defined in an `enum ButtonState`. Your component controls the state of the button.
+
+```
+import { ButtonState } from 'ng2-stateful-button';
+
+@Component(…)
+export class MyComponent {
+  …
+  myButtonState: ButtonState = ButtonState.IDLE;
+  …
+}
+```
+
+Use the `sb-label-idle/doing/failure/success` components to define what will be shown for each state of the button. That's it!
 
 ## Develop
 
