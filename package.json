@@ -1,5 +1,5 @@
 {
-  "version": "0.0.6",
+  "version": "0.0.7",
   "name": "ng2-stateful-button",
   "description": "An implementation of stateful buttons for angular2+ including loading, progress,success and failure state.",
   "repository": {
