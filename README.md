@@ -61,6 +61,12 @@ export class MyComponent {
   …
   myButtonState: ButtonState = ButtonState.IDLE;
   …
+
+  do() {
+    this.myButtonState = ButtonState.DOING;
+    // http requests, timeout, etc.
+    this.myButtonState = ButtonState.SUCCESS;
+  }
 }
 ```
 
