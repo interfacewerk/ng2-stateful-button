@@ -23,6 +23,12 @@ export class SBLabelSuccessComponent {}
 export class SBLabelDoingComponent {}
 
 @Component({
+  selector: 'sb-label-failure',
+  template: `<ng-content></ng-content>`
+})
+export class SBLabelFailureComponent {}
+
+@Component({
   selector: 'stateful-button',
   template: `<ng-content></ng-content>`,
   styles: [
@@ -35,6 +41,10 @@ export class SBLabelDoingComponent {}
       opacity: 0;
     }
 
+    :host:not(.stateful-button--failure) >>> sb-label-failure {
+      opacity: 0;
+    }
+
     :host:not(.stateful-button--doing) >>> sb-label-doing {
       opacity: 0;
     }
@@ -43,7 +53,7 @@ export class SBLabelDoingComponent {}
       opacity: 0;
     }
 
-    :host >>> sb-label-idle, :host >>> sb-label-doing, :host >>> sb-label-success {
+    :host >>> sb-label-idle, :host >>> sb-label-doing, :host >>> sb-label-success, :host >>> sb-label-failure {
       height: 30px;
       line-height: 30px;
       margin-top: -30px;
@@ -63,6 +73,11 @@ export class SBLabelDoingComponent {}
 
     :host.stateful-button--success >>> button {
       background-color: #2ECC40;
+      color: white;
+    }
+
+    :host.stateful-button--failure >>> button {
+      background-color: red;
       color: white;
     }
 
@@ -92,6 +107,8 @@ export class StatefulButtonComponent {
         return always + 'stateful-button--doing';
       case ButtonState.SUCCESS:
         return always + 'stateful-button--success';
+      case ButtonState.FAILURE:
+        return always + 'stateful-button--failure';
       default:
         return always + 'stateful-button--idle';
     }
@@ -109,7 +126,8 @@ export class StatefulButtonComponent {
 export enum ButtonState {
   IDLE,
   DOING,
-  SUCCESS
+  SUCCESS,
+  FAILURE
 }
 
 export function delay(ms: number): Promise<void> {
