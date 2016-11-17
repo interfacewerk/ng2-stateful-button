@@ -6,7 +6,7 @@ import {
   SBLabelDoingComponent,
   SBLabelIdleComponent,
   SBLabelSuccessComponent
-} from './stateful-button/stateful-button.directive';
+} from './stateful-button/stateful-button.component';
 import { BrowserModule } from '@angular/platform-browser';
 export { ButtonState, delay };
 

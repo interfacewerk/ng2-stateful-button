@@ -16,8 +16,8 @@
   "files":[
     "index.ts",
     "./src/index.ts",
-    "./src/stateful-button/stateful-button.directive.ts",
-    "./src/stateful-button/stateful-button.directive.spec.ts"
+    "./src/stateful-button/stateful-button.component.ts",
+    "./src/stateful-button/stateful-button.component.spec.ts"
   ],
   "exclude": [
     "node_modules",
