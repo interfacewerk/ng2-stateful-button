@@ -26,6 +26,7 @@ yarn-error.log
 .idea
 .project
 .settings
+.vscode
 
 ############
 ## Windows
