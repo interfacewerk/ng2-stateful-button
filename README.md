@@ -1,8 +1,11 @@
 # Angular2 Stateful Button
 
+[ ![Codeship Status for interfacewerk/ng2-stateful-button](https://codeship.com/projects/d2335380-912b-0134-8559-6ae3641f140d/status?branch=master)](https://codeship.com/projects/185845)
+
 ## Demo
 
 An implementation of stateful buttons for angular2+ including loading, progress,success and failure state.
+
 
 ## Installation
 
