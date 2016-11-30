@@ -8,7 +8,7 @@
   },
   "author": "interfacewerk GmbH, Kevin Merckx, Moritz C. Türck",
   "license": "MIT",
-  "main": "bundles/ng2-stateful-button.js",
+  "main": "bundles/ng2-stateful-button.umd.js",
   "module": "bundles/index.js",
   "typings": "bundles/index.d.ts",
   "scripts": {
