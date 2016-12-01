@@ -1,7 +1,8 @@
 import {
   Component,
   Input,
-  HostBinding
+  HostBinding,
+  ViewEncapsulation
 } from '@angular/core';
 
 @Component({
@@ -31,63 +32,70 @@ export class SBLabelFailureComponent {}
 @Component({
   selector: 'stateful-button',
   template: `<ng-content></ng-content>`,
+  encapsulation: ViewEncapsulation.None,
   styles: [
     `
-    :host {
+    stateful-button {
       display: inline-block;
     }
 
-    :host:not(.stateful-button--idle) >>> sb-label-idle {
+    stateful-button:not(.stateful-button--idle) sb-label-idle {
       opacity: 0;
     }
 
-    :host:not(.stateful-button--failure) >>> sb-label-failure {
+    stateful-button:not(.stateful-button--failure) sb-label-failure {
       opacity: 0;
     }
 
-    :host:not(.stateful-button--doing) >>> sb-label-doing {
+    stateful-button:not(.stateful-button--doing) sb-label-doing {
       opacity: 0;
     }
 
-    :host:not(.stateful-button--success) >>> sb-label-success {
+    stateful-button:not(.stateful-button--success) sb-label-success {
       opacity: 0;
     }
 
-    :host >>> sb-label-idle, :host >>> sb-label-doing, :host >>> sb-label-success, :host >>> sb-label-failure {
+    stateful-button button {
       height: 30px;
       line-height: 30px;
-      margin-top: -30px;
+      padding: 5px;
+    }
+
+    stateful-button sb-label-idle, stateful-button sb-label-doing, stateful-button sb-label-success, stateful-button sb-label-failure {
+      height: 20px;
+      line-height: 20px;
+      margin-top: -20px;
       text-align: center;
       display: block;
     }
 
-    :host >>> sb-label-idle {
+    stateful-button sb-label-idle {
       margin-top: 0;
     }
 
-    :host.stateful-button--doing >>> button {
+    stateful-button.stateful-button--doing button {
       background-color: grey;
       color: white;
       cursor: wait;
     }
 
-    :host.stateful-button--success >>> button {
+    stateful-button.stateful-button--success button {
       background-color: #2ECC40;
       color: white;
     }
 
-    :host.stateful-button--failure >>> button {
+    stateful-button.stateful-button--failure button {
       background-color: red;
       color: white;
     }
 
-    :host >>> sb-label-doing::before {
+    stateful-button sb-label-doing::before {
       content: '';
       display: inline-block;
-      width: 20px;
-      height: 20px;
+      width: 16px;
+      height: 16px;
       margin: 0px 5px -3px 0px;
-      border-radius: 10px;
+      border-radius: 8px;
       box-shadow: 0 1px 0 0 white;
       -ms-animation: stateful-button--animation 1s linear infinite;
       -moz-animation: stateful-button--animation 1s linear infinite;
